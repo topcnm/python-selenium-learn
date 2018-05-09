@@ -31,8 +31,6 @@ class Page(object):
         self._open(self.url)
 
     def on_page(self):
-        print('Current url: {}'.format(self.driver.current_url))
-        print('Aimed url: {}'.format(self.base_url + self.url))
         return self.driver.current_url.find(self.base_url + self.url) > -1
 
     def script(self, src):

@@ -6,7 +6,9 @@ from time import sleep
 
 class CreatePreQ(Page):
     """
-    创建预提问
+    创建预提问，用webdriver 描述页面元素的交互行为，以及用户可能存在的业务行为；
+    页面变更时，只需要修改这一层即可
+    loc: locator 定位器
     """
 
     url = "/honycloud/mrbs/manager/built/index.html#/addNewPreQ"
