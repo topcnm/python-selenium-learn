@@ -7,17 +7,14 @@ from page_obj.meetingListPage import MeetingList
 
 
 class SearchMeetingTest(myunit.MyUnitTest):
-    """
-    搜索测试
-    """
+    u"""会议列表页面"""
 
     def keyword_search_verify(self, keyword=""):
         MeetingList(self.driver).search_something(keyword)
 
     def test_search(self):
+        u"""正常会议列表搜索测试"""
         self.keyword_search_verify(keyword=u'汗毛竖起')
-
-        sleep(10)
 
     def setUp(self):
         super(SearchMeetingTest, self).setUp()

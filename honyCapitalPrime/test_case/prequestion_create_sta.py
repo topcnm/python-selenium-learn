@@ -8,19 +8,18 @@ from page_obj.prequestionPage import CreatePreQ
 
 
 class CreatePreQuestionTest(myunit.MyUnitTest):
-    """
-    新建预提问, 该页面不允许出现任何webdriver API
-    """
+    u"""新建预提问页面"""
     create_success_url = '/preQuestionList'
 
     def pre_question_create_verify(self, topic="", remark=""):
         CreatePreQ(self.driver).test_create_pre_question(topic, remark)
 
     def test_create(self):
+        u"""正常新建预提问测试"""
         self.pre_question_create_verify(
             topic="i am a test man",
             remark="this is robot action")
-        sleep(2)
+        sleep(3)
         page = CreatePreQ(self.driver)
         self.assertIn(
             self.create_success_url,
@@ -29,9 +28,10 @@ class CreatePreQuestionTest(myunit.MyUnitTest):
         )
 
     def test_create_no_topic_error(self):
+        u"""异常新建预提问测试：未输入预提问主题"""
         self.pre_question_create_verify(
             topic="", remark="this is robot action")
-        sleep(2)
+        sleep(3)
         page = CreatePreQ(self.driver)
         self.assertNotIn(
             self.create_success_url,
@@ -40,8 +40,9 @@ class CreatePreQuestionTest(myunit.MyUnitTest):
         )
 
     def test_create_no_remark(self):
+        u"""异常新建预提问测试：未输入预提问备注"""
         self.pre_question_create_verify(topic="Hi, honyCapital", remark="")
-        sleep(2)
+        sleep(3)
         page = CreatePreQ(self.driver)
         self.assertIn(
             self.create_success_url,
@@ -69,6 +70,6 @@ if __name__ == '__main__':
     file_path = "../report/py_result.html"
     fp = open(file_path, 'wb')
 
-    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u'测试报告', description=u'这是报告藐视')
+    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u'新建预提问测试报告', description=u'这是报告说明')
     runner.run(suite)
     fp.close()
