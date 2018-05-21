@@ -9,7 +9,7 @@ class MeetingList(Page):
     我的会议列表
     """
 
-    url = "/honycloud/mrbs/manager/built/index.html#/meetingList"
+    url = "xxxxx"
 
     search_title_button_loc = (By.XPATH, "//span[@class='input-group-addon']")
     search_title_input_loc = (By.XPATH, "//span[@class='input-group']/form/input[@class='form-control']")

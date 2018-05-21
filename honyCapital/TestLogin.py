@@ -8,11 +8,11 @@ class TestLogin(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(10)
-        self.driver.get('https://uat.honycapital.com/honycloud/login.jsp')
+        self.driver.get('xxxxx')
 
     def test_login(self):
-        username = 'otzhaomin'
-        password = 'Password!'
+        username = 'xxxxx'
+        password = 'xxxxx'
 
         login_page = Login()
         login_page.user_login(self.driver, username, password)

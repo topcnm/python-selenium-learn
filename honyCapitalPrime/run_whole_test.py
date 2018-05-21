@@ -36,9 +36,9 @@ def send_email(file_path):
         5. 退出
     '''
     smtp = smtplib.SMTP()
-    smtp.connect("owa.corp.gome.com.cn")
-    smtp.login("zhouwangsheng@gome.com.cn", "!abcd123")
-    smtp.sendmail("zhouwangsheng@gome.com.cn", "zhouwangsheng@gome.com.cn", msg_root.as_string())
+    smtp.connect("xxxxx")
+    smtp.login("xxxxx", "xxxxx")
+    smtp.sendmail("xxxxx", "xxxxx", msg_root.as_string())
     smtp.quit()
     print('hahaha !!!')
 

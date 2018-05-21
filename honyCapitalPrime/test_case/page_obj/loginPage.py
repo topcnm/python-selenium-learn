@@ -9,7 +9,7 @@ class Login(Page):
         用户登录
     """
 
-    url = "/honycloud/login.jsp"
+    url = "xxxxx"
 
     login_username_loc = (By.ID, "idToken1")
     login_password_loc = (By.ID, "idToken2")

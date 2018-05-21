@@ -11,7 +11,7 @@ class CreatePreQ(Page):
     loc: locator 定位器
     """
 
-    url = "/honycloud/mrbs/manager/built/index.html#/addNewPreQ"
+    url = "xxxxx"
 
     preQ_topic_input_loc = (By.XPATH, "//input[@maxlength='50']")
 

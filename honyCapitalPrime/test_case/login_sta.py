@@ -13,7 +13,7 @@ class LoginTest(myunit.MyUnitTest):
 
     def test_login(self):
         u"""正常登录测试"""
-        self.user_login_verify(username="otzhaomin", password="Password!")
+        self.user_login_verify(username="xxxxx", password="xxxxx!")
         page = Login(self.driver)
         title = page.on_title()
         self.assertEqual(title, u'工作台')

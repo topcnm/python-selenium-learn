@@ -8,7 +8,7 @@ class Page(object):
             2 该页面对webDriver 方法做简易封装，更加语义化
     """
 
-    hony_url = "https://uat.honycapital.com"
+    hony_url = "xxxxx"
 
     def __init__(self, selenium_driver, base_url=hony_url, parent=None):
         self.base_url = base_url
