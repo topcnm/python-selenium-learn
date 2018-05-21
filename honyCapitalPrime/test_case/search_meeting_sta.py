@@ -22,4 +22,8 @@ class SearchMeetingTest(myunit.MyUnitTest):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    suite = unittest.TestSuite()
+    suite.addTest(SearchMeetingTest("test_search"))
+
+    runner = unittest.TextTestRunner()
+    runner.run(suite)
